@@ -143,3 +143,6 @@ oldExamples/
 !libs/sndfile/lib/win_cb/*
 ofxTimelineLib.a
 *.opendb
+
+*/Makefile
+*/config.make
