@@ -1,106 +1,145 @@
-#standard gitignore for Flightphase addons
+#########################
+# general patterns
+#########################
 
-#xcode files
-*.mode*
-*.perspectivev3
-*.pbxuser
-*.xcworkspace
-xcuserdata/
+docs/html
+docs/tagfile.xml
 
-#builds
-build/
-obj/
+*/bin/*
+
+[Bb]uild/
+[Oo]bj/
 *.o
-*.app
-*/x64/
+[Dd]ebug*/
+[Rr]elease*/
+*.mode*
+*.app/
+*.pyc
+.svn/
 
-#codeblocks files
-apps/*/*/*.layout
-apps/*/*/*.depend
-apps/*/*/bin/clickToLaunch*
-apps/*/*/bin/libs
-apps/*/*/obj
-example-*/*build_log.html
-example-*/example-*.layout
-example-*/example-*.depend
+#########################
+# IDE
+#########################
 
-#VCPP files
+# XCode
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.mode1v3
+*.mode2v3
+#XCode 4
+xcuserdata
+*.xcworkspace
+*.xcodeproj
+Project.xcconfig
+openFrameworks-Info.plist
+ofxiOS-Info.plist
+ofxiOS_Prefix.pch
 
+
+
+# Code::Blocks
+*.depend
+*.layout
+*.cbTemp
+*.cbp
+*.workspace
+
+# Visual Studio
+*.sdf
+*.opensdf
+*.suo
+*.pdb
+*.ilk
+*.aps
+*.sln
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+icon.rc
 *.dll
 *.lib
 *.exe
-*.sdf
-*.opensdf
 *.exp
-*.suo
-*.ilk
-*.pdb
-*.suo
 
 ipch/
 
-#mac files
-.DS_Store
+# Eclipse
+.metadata
+local.properties
+.externalToolBuilders
+.cproject
+.project
+.settings/
 
-#linux files
+# QtCreator
+*.qbs
+*.qbs.user
+*.pro
+*.pro.user
+
+# Codelite
+*.session
+*.tags
+*.workspace.*
+
+#########################
+# operating system
+#########################
+
+# Linux
+*~
+# KDE
+.directory
+.AppleDouble
 *modex.so
 *modexp64.so
 */*/*.tags
-*/bin/timelineExample
 
+
+# OSX
+.DS_Store
+*.swp
+*~.nib
+# Thumbnails
+._*
+
+# Windows
+# Windows image file caches
+Thumbs.db
+# Folder config file
+Desktop.ini
+
+#Android
+.csettings
+
+#########################
+# packages
+#########################
+
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+#########################
+# ofxTimeline specific
+#########################
 example-videoRenderer/bin/data/renders/
 oldExamples/
 !libs/openal/libs/win_cb/*.lib
 !libs/openal/libs/win_cb/**/*.lib
 !libs/sndfile/lib/win_cb/*
-=======
-#standard gitignore for Flightphase addons
-
-#xcode files
-*.mode*
-*.perspectivev3
-*.pbxuser
-*.xcworkspace
-xcuserdata/
-
-#builds
-build/
-obj/
-*.o
-*.app
-
-#codeblocks files
-apps/*/*/*.layout
-apps/*/*/*.depend
-apps/*/*/bin/clickToLaunch*
-apps/*/*/bin/libs
-apps/*/*/obj
-
-#VCPP files
-
-*.dll
-*.lib
-*.exe
-*.sdf
-*.opensdf
-*.exp
-*.suo
-*.ilk
-*.pdb
-*.suo
-
-ipch/
-
-#mac files
-.DS_Store
-
-#linux files
-*modex.so
-*modexp64.so
-*/*/*.tags
-*/bin/timelineExample
-
-example-videoRenderer/bin/data/renders/
-oldExamples/
 ofxTimelineLib.a
 *.opendb
