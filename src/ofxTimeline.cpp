@@ -96,9 +96,9 @@ ofxTimeline::ofxTimeline()
 	headersAreEditable(false),
 	minimalHeaders(false),
    	//copy from ofxTimeline/assets into bin/data/
-	defaultPalettePath("gui_assets/timeline_GUI/defaultColorPalette.png"),
+	defaultPalettePath("timeline/assets/defaultColorPalette.png"),
 	//TODO: should be able to use bitmap font if need be
-	fontPath("gui_assets/timeline_GUI/NewMedia Fett.ttf"),
+	fontPath("timeline/assets/NewMedia Fett.ttf"),
 	fontSize(9),
 	footersHidden(false),
     showPageTabs(true)
@@ -231,6 +231,7 @@ void ofxTimeline::setup(string firstPageName){
         //setName("timeline" + ofToString(timelineNumber++));
          setName("tl");
     }
+	setWorkingFolder("timeline");
     setupStandardElements();
 }
 

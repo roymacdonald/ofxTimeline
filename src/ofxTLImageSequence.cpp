@@ -232,8 +232,8 @@ void ofxTLImageSequence::recomputePreview(){
 		
 		p.frameIndex = startIndex+frameStep*i;
 		p.texture = new ofTexture();
-		p.texture->allocate(thumbnail->getWidth(), thumbnail->getHeight(), ofGetGlInternalFormat(thumbnail->getPixelsRef()));
-		p.texture->loadData(thumbnail->getPixels(), thumbnail->getWidth(), thumbnail->getHeight(), ofGetGlInternalFormat(thumbnail->getPixelsRef()));
+		p.texture->allocate(thumbnail->getWidth(), thumbnail->getHeight(), ofGetGlInternalFormat(thumbnail->getPixels()));
+		p.texture->loadData(thumbnail->getPixels());//, thumbnail->getWidth(), thumbnail->getHeight(), ofGetGlInternalFormat(thumbnail->getPixelsRef()));
 		p.bounds = ofRectangle(widthPerFrame*i, 0, widthPerFrame, bounds.height);
 
 //		cout << " preview texture for frame " << startIndex+framesInRange*i << endl;

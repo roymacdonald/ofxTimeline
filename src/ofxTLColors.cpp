@@ -32,7 +32,7 @@
 #include "ofxTLColors.h"
 
 void ofxTLColors::load() {
-    string colorFile = "gui_assets/timeline_GUI/defaultColors.xml";
+    string colorFile = "timeline/settings/defaultColors.xml";
 	load(colorFile);
 }
 
